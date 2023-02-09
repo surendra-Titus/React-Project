@@ -9,10 +9,10 @@ const Header = () => {
         <Title />
         <div className="nav-item">
           <ul className="flex py-3">
-            <li className="px-3 text-zinc-900">Home</li>
-            <li className="px-3 text-zinc-900">About</li>
-            <li className="px-3 text-zinc-900">Contact</li>
-            <li className="px-3 text-zinc-900">
+            <li className="px-8 text-zinc-900">Home</li>
+            <li className="px-8 text-zinc-900">About</li>
+            <li className="px-8 text-zinc-900">Contact</li>
+            <li className="px-8 text-zinc-900">
               Cart <span className="font-bold text-lg pr-px">2</span>
             </li>
           </ul>
