@@ -5,7 +5,7 @@ const Title = () => {
 const Header = () => {
   return (
     <>
-      <div className="h-16 bg-violet-400 flex justify-between">
+      <div className="h-16 bg-violet-400 flex justify-between shadow-lg ">
         <Title />
         <div className="nav-item">
           <ul className="flex py-3">
