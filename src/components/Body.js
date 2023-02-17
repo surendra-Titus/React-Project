@@ -3,6 +3,8 @@ import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import emptySearchResult from "../assets/empty-search-results.png";
 import { API_URL } from "../constants";
+import { IMG_CDN_URL } from "../constants";
+import { Link } from "react-router-dom";
 
 const fillterData = (query, arr) => {
   if (query === "") {
@@ -62,7 +64,9 @@ const Body = () => {
           />
         ) : (
           filteredRestaurants.map((rest) => (
-            <RestaurantCard key={rest.data.id} data={rest.data} />
+            <Link key={rest.data.id} to={`/restaurant/${rest.data.id}`}>
+              <RestaurantCard data={rest.data} />
+            </Link>
           ))
         )}
       </div>

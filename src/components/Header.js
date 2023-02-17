@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Title = () => {
   return <h1 className="font-bold text-slate-900 text-lg p-3">zozo Food</h1>;
 };
@@ -9,11 +11,18 @@ const Header = () => {
         <Title />
         <div className="nav-item">
           <ul className="flex py-3">
-            <li className="px-8 text-zinc-900">Home</li>
-            <li className="px-8 text-zinc-900">About</li>
-            <li className="px-8 text-zinc-900">Contact</li>
             <li className="px-8 text-zinc-900">
-              Cart <span className="font-bold text-lg pr-px">2</span>
+              <Link to="/">Home</Link>
+            </li>
+            <li className="px-8 text-zinc-900">
+              <Link to="/about">About</Link>
+            </li>
+            <li className="px-8 text-zinc-900">
+              <Link to="/contact">Contact</Link>
+            </li>
+            <li className="px-8 text-zinc-900">
+              <Link to="/cart">Cart</Link>
+              <span className="font-bold text-lg pr-px">2</span>
             </li>
           </ul>
         </div>
