@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import emptySearchResult from "../assets/empty-search-results.png";
+import { API_URL } from "../constants";
 
 const fillterData = (query, arr) => {
   if (query === "") {
@@ -22,9 +23,7 @@ const Body = () => {
   }, []);
 
   const getResaurants = async () => {
-    let response = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4698577&lng=78.3578246&page_type=DESKTOP_WEB_LISTING"
-    );
+    let response = await fetch(API_URL);
     let data = await response.json();
     setAllRestaurants(data?.data?.cards[2].data?.data?.cards);
     setfilteredRestaurants(data?.data?.cards[2].data?.data?.cards);
