@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 
 const Title = () => {
-  return <h1 className="font-bold text-slate-900 text-lg p-3">zozo Food</h1>;
+  return (
+    <h1 className="font-bold text-slate-900 text-lg p-3">
+      <Link to="/">zozo Food</Link>
+    </h1>
+  );
 };
 
 const Header = () => {
